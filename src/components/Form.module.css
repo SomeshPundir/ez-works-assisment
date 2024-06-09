@@ -1,0 +1,169 @@
+.contentWrapper1{
+width: 50vw;
+padding: 10px;
+}
+.contentWrapper1 h1{
+color: #6FDCE3;
+font-size: 5rem;
+}
+.contentWrapper1 h3{
+  font-size: 2rem;
+}
+
+.contentWrapper1 p{
+  display: inline-block;
+font-size: 20px;
+}
+
+.emailForm{
+display: inline-block;
+}
+
+.innerFormContent {
+  display: flex; 
+  align-items: center; 
+  height: 50px; 
+}
+
+.innerFormContent input {
+  width: 25vw;
+  height: 100%; 
+  padding: 10px;
+  border-radius: 6px;
+  box-sizing: border-box; 
+}
+
+.btn {
+  height: 100%; 
+  font-size: 20px;
+  border: none;
+  margin: 0px 10px;
+  padding: 10px 20px; 
+  background-color: #FF8F00;
+  font-weight: 500;
+  border-radius: 6px;
+  color:#ffff;
+  display: flex; 
+  align-items: center; 
+  justify-content: center; 
+}
+
+.contentWrapper2{
+  display: inline-block;
+width: 50vw;
+padding:10px;
+}
+
+.godWrapper{
+  display: flex;
+  padding-top: 12%;
+}
+
+
+/* for making button disabled when req. is sent */
+
+.btn:disabled{
+  color: #999999;
+  cursor: not-allowed;
+  background-color: #cccccc;
+}
+
+/* media query for mobile responsiveness. */
+
+@media (max-width: 480px) {
+  .contentWrapper1 h1{
+    font-size: 4em;
+  }
+  .contentWrapper1 h3{
+    font-size: 1.5rem;
+  }
+  .godWrapper {
+    flex-direction: column; 
+    align-items: center;
+    justify-content: center;
+    padding-top: 0px;
+  }
+
+  .contentWrapper1, .contentWrapper2 {
+    width: 100%;
+    text-align: center;
+  }
+
+  .innerFormContent {
+    flex-direction: column;
+  }
+
+  .innerFormContent input,
+  .btn {
+display: none;  }
+}
+
+@media (min-width: 481px) and (max-width: 967px) {
+  .godWrapper {
+    flex-direction: column;
+    align-items: center;
+    padding-top: 0px;
+  }
+
+  .contentWrapper1,
+  .contentWrapper2 {
+    width: 100%;
+  }
+
+  .contentWrapper2 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, auto);
+    gap: 20px;
+  }
+
+  .innerFormContent {
+    align-items: center;
+  }
+
+  .innerFormContent input,
+  .btn {
+    width: 100%;
+  }
+
+}
+/* media query for ipad and  macbook medium size display  */
+/* 2732x2048 ( Ipad )
+5. 1440*823 (MacBook) */
+
+@media (min-width: 1800px) and (max-width: 2732px) {
+  .contentWrapper2 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+
+  .innerFormContent {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .innerFormContent input,
+  .btn {
+    width: 32%;
+  }
+  .contentWrapper1 h1{
+    font-size: 8rem;
+
+  }
+  .contentWrapper1 h3{
+    font-size: 5rem;
+  }
+
+  .contentWrapper1 p{
+    font-size: 30px;
+  }
+  .innerFormContent input {
+    width:25vw ;
+  }
+
+  .btn{
+width: 10vw;
+  }
+}
